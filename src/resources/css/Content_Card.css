@@ -1,0 +1,9 @@
+.card-group {
+  padding: 0;
+}
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.125) !important;
+}
+.card:nth-child(2) {
+  margin: 0 40px !important;
+}
