@@ -13,7 +13,7 @@ const Content = () => {
     <Content_box>
       <Container fluid="xl">
         <Row className="row_right">
-          <div className="mb-4 w-25 row_right_padding_0">
+          <div className="mb-4 w-25 row_padding_0">
             <Form.Select aria-label="Default select example">
               <option value="1">최신순</option>
               <option value="2">거리순</option>
