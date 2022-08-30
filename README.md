@@ -1,22 +1,22 @@
 # 토이 프로젝트 - 낚시 노트
 
-#### Npm Init
+### Npm Init
 
 - CRA
 
-#### React Version
+### React Version
 
 - ^17.0.2
 
-#### State Management
+### State Management
 
 - Redux
 
-#### Css
+### Css
 
 - React BootStrap
 - Styled-components
 
-#### Icon
+### Icon
 
 - FontAwesome
