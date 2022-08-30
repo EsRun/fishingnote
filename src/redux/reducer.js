@@ -1,7 +1,9 @@
-import { ADD_SUBSCRIBER, REMOVE_SUBSCRIBER } from "./types";
+import { ADD_SUBSCRIBER, REMOVE_SUBSCRIBER, LOGIN, LOGOUT } from "./types";
 
 const initialState = {
   UserName: "무늬오징어",
+  Login: false,
+  Logout: true,
 };
 
 const subscribersReducer = (state = initialState, action) => {
@@ -15,6 +17,16 @@ const subscribersReducer = (state = initialState, action) => {
       return {
         ...state,
         UserName: "한치",
+      };
+    case LOGIN:
+      return {
+        ...state,
+        Login: true,
+      };
+    case LOGOUT:
+      return {
+        ...state,
+        Logout: false,
       };
     default:
       return state;

@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { login } from "../redux/actions";
+import Button from "react-bootstrap/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFish } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Login = () => {
@@ -9,7 +14,7 @@ const Login = () => {
 
   const handleValidation = (event) => {
     let formIsValid = true;
-
+    /*
     if (!email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
       formIsValid = false;
       setemailError("Email Not Valid");
@@ -29,13 +34,23 @@ const Login = () => {
       setpasswordError("");
       formIsValid = true;
     }
-
+*/
     return formIsValid;
   };
 
+  const { Login } = useSelector((state) => ({
+    Login: state.login,
+  }));
+  const dispatch = useDispatch();
+
   const loginSubmit = (e) => {
     e.preventDefault();
-    handleValidation();
+    if (handleValidation() === true) {
+      dispatch(login());
+      window.location.reload();
+    } else {
+      console.log("실패");
+    }
   };
 
   return (
@@ -44,14 +59,17 @@ const Login = () => {
         <div className="col-md-4">
           <form id="loginform" onSubmit={loginSubmit}>
             <div className="form-group">
-              <label>Email address</label>
+              <div className="text-center">
+                <FontAwesomeIcon icon={faFish} size="10x" />
+                <h4 className="mt-1 mb-5">Fishing Note</h4>
+              </div>
               <input
                 type="email"
-                className="form-control"
-                id="EmailInput"
+                className="form-control mb-4"
+                id="UserName"
                 name="EmailInput"
                 aria-describedby="emailHelp"
-                placeholder="Enter email"
+                placeholder="UserName"
                 onChange={(event) => setEmail(event.target.value)}
               />
               <small id="emailHelp" className="text-danger form-text">
@@ -59,11 +77,10 @@ const Login = () => {
               </small>
             </div>
             <div className="form-group">
-              <label>Password</label>
               <input
                 type="password"
-                className="form-control"
-                id="exampleInputPassword1"
+                className="form-control mb-4"
+                id="Password"
                 placeholder="Password"
                 onChange={(event) => setPassword(event.target.value)}
               />
@@ -71,17 +88,9 @@ const Login = () => {
                 {passwordError}
               </small>
             </div>
-            <div className="form-group form-check">
-              <input
-                type="checkbox"
-                className="form-check-input"
-                id="exampleCheck1"
-              />
-              <label className="form-check-label">Check me out</label>
-            </div>
-            <button type="submit" className="btn btn-primary">
-              Submit
-            </button>
+            <Button type="submit" variant="primary" className="form-control">
+              SIGN IN
+            </Button>
           </form>
         </div>
       </div>

@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 
 function App() {
-  const [sign, setSign] = useState(true);
+  const [sign, setSign] = useState(false);
 
   return (
     <Provider store={store}>
