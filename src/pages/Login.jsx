@@ -21,7 +21,7 @@ const Login = () => {
 
   useEffect(() => {
     console.log("Login.jsx= " + isLogged);
-    if (isLogged === true) navigate(-2);
+    if (isLogged === true) navigate("/");
   }, []);
 
   const handleValidation = (event) => {
