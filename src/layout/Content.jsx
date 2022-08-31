@@ -48,9 +48,10 @@ const Content = () => {
     });
   };
 
-  const { count } = useSelector((state) => ({
-    count: state.count,
+  const { isLogged } = useSelector((state) => ({
+    isLogged: state.isLogged,
   }));
+  console.log("Content= " + isLogged);
   const dispatch = useDispatch();
 
   const add = () => {
@@ -62,7 +63,6 @@ const Content = () => {
       <Container fluid="xl">
         <Row className="row_right">
           <div className="mb-4 w-25 row_padding_0">
-            <div>{count}</div>
             <button onClick={add}>+</button>
             <button onClick={() => dispatch(removeSubscriber())}>-</button>
             <Form.Select aria-label="Default select example">

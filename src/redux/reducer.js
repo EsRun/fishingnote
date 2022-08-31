@@ -2,8 +2,7 @@ import { ADD_SUBSCRIBER, REMOVE_SUBSCRIBER, LOGIN, LOGOUT } from "./types";
 
 const initialState = {
   UserName: "무늬오징어",
-  Login: false,
-  Logout: true,
+  isLogged: false,
 };
 
 const subscribersReducer = (state = initialState, action) => {
@@ -21,12 +20,12 @@ const subscribersReducer = (state = initialState, action) => {
     case LOGIN:
       return {
         ...state,
-        Login: true,
+        isLogged: true,
       };
     case LOGOUT:
       return {
         ...state,
-        Logout: false,
+        isLogged: false,
       };
     default:
       return state;
