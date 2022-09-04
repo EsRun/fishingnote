@@ -14,6 +14,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [passwordError, setpasswordError] = useState("");
   const [emailError, setemailError] = useState("");
+  const [logged, setLogged] = useState(false);
 
   const { isLogged } = useSelector((state) => ({
     isLogged: state.isLogged,
@@ -21,8 +22,11 @@ const Login = () => {
 
   useEffect(() => {
     console.log("Login.jsx= " + isLogged);
-    if (isLogged === true) navigate("/");
-  }, []);
+    if (isLogged === true) {
+      console.log("Login.jsx2= " + isLogged);
+      navigate("/");
+    }
+  }, [isLogged]);
 
   const handleValidation = (event) => {
     let formIsValid = true;
