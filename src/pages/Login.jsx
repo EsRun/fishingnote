@@ -10,11 +10,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  const [passwordError, setpasswordError] = useState("");
-  const [emailError, setemailError] = useState("");
-  const [logged, setLogged] = useState(false);
+
+  const [inputs, setInputs] = useState({
+    password: "",
+    email: "",
+    passwordError: "",
+    emailError: "",
+    logged: false,
+  });
+
+  const { password, email, passwordError, emailError, logged } = inputs;
 
   const { isLogged } = useSelector((state) => ({
     isLogged: state.isLogged,
@@ -28,9 +33,19 @@ const Login = () => {
     }
   }, [isLogged]);
 
-  const handleValidation = (event) => {
+  // 인풋값 변경
+  const onChange = (e) => {
+    setInputs({
+      ...inputs,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  const handleValidation = (e) => {
+    const id = e.target;
+    console.log(id);
     let formIsValid = true;
-    /*
+
     if (!email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
       formIsValid = false;
       setemailError("Email Not Valid");
@@ -50,13 +65,13 @@ const Login = () => {
       setpasswordError("");
       formIsValid = true;
     }
-*/
+
     return formIsValid;
   };
 
   const loginSubmit = (e) => {
     e.preventDefault();
-    if (handleValidation() === true) {
+    if (handleValidation(e) === true) {
       dispatch(login());
       console.log("is= " + isLogged);
 
@@ -83,7 +98,7 @@ const Login = () => {
                 name="EmailInput"
                 aria-describedby="emailHelp"
                 placeholder="UserName"
-                onChange={(event) => setEmail(event.target.value)}
+                onChange={onChange}
               />
               <small id="emailHelp" className="text-danger form-text">
                 {emailError}
@@ -95,7 +110,7 @@ const Login = () => {
                 className="form-control mb-4"
                 id="Password"
                 placeholder="Password"
-                onChange={(event) => setPassword(event.target.value)}
+                onChange={onChange}
               />
               <small id="passworderror" className="text-danger form-text">
                 {passwordError}
