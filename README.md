@@ -1,6 +1,6 @@
 # 토이 프로젝트 - 낚시 노트
 
-### Npm Init
+### React Build Tool
 
 - CRA
 
