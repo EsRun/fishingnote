@@ -16,10 +16,9 @@ const Login = () => {
     email: "",
     passwordError: "",
     emailError: "",
-    logged: false,
   });
 
-  const { password, email, passwordError, emailError, logged } = inputs;
+  const { password, email, passwordError, emailError } = inputs;
 
   const { isLogged } = useSelector((state) => ({
     isLogged: state.isLogged,
