@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Login, Main, Error, Side } from "./pages/";
+import { Login2, Main, Error, Side } from "./pages/";
 
 function App() {
   useEffect(() => {
@@ -11,7 +11,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Main />}></Route>
-      <Route default path="/login" element={<Login />}></Route>
+      <Route default path="/login" element={<Login2 />}></Route>
       <Route path="/error" element={<Error />}></Route>
       <Route path="/*" element={<Navigate to="/error" replace />} />
     </Routes>
