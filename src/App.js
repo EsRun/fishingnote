@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Login, Main, Error, Side } from "./pages/";
+import { Login, Main, Error } from "./pages/";
 
 function App() {
   useEffect(() => {

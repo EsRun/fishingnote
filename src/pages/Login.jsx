@@ -14,12 +14,9 @@ const Login = () => {
   const [inputs, setInputs] = useState({
     password: "",
     email: "",
-    passwordError: "",
-    emailError: "",
-    logged: false,
   });
 
-  const { password, email, passwordError, emailError, logged } = inputs;
+  const { password, email } = inputs;
 
   const { isLogged } = useSelector((state) => ({
     isLogged: state.isLogged,
@@ -42,27 +39,25 @@ const Login = () => {
   };
 
   const handleValidation = (e) => {
-    const id = e.target;
-    console.log(id);
+    const id = e.target.id;
+    console.log("id= ", id);
     let formIsValid = true;
 
     if (!email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
       formIsValid = false;
-      setemailError("Email Not Valid");
+      //setemailError("Email Not Valid");
       return false;
     } else {
-      setemailError("");
+      //setemailError("");
       formIsValid = true;
     }
 
     if (!password.match(/^[a-zA-Z]{8,22}$/)) {
       formIsValid = false;
-      setpasswordError(
-        "Only Letters and length must best min 8 Chracters and Max 22 Chracters"
-      );
+      //setpasswordError("Only Letters and length must best min 8 Chracters and Max 22 Chracters");
       return false;
     } else {
-      setpasswordError("");
+      //setpasswordError("");
       formIsValid = true;
     }
 
@@ -101,7 +96,7 @@ const Login = () => {
                 onChange={onChange}
               />
               <small id="emailHelp" className="text-danger form-text">
-                {emailError}
+                "ㅇㅇ"
               </small>
             </div>
             <div className="form-group">
@@ -113,7 +108,7 @@ const Login = () => {
                 onChange={onChange}
               />
               <small id="passworderror" className="text-danger form-text">
-                {passwordError}
+                "ss"
               </small>
             </div>
             <Button type="submit" variant="primary" className="form-control">
