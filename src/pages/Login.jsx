@@ -14,9 +14,17 @@ const Login = () => {
   const [inputs, setInputs] = useState({
     password: "",
     email: "",
+<<<<<<< HEAD
   });
 
   const { password, email } = inputs;
+=======
+    passwordError: "",
+    emailError: "",
+  });
+
+  const { password, email, passwordError, emailError } = inputs;
+>>>>>>> 23d562f477fa2cdb0272628ee9bbc8e1122dae5c
 
   const { isLogged } = useSelector((state) => ({
     isLogged: state.isLogged,
