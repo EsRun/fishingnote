@@ -78,6 +78,7 @@ export default function Login() {
 
   const handleValidation = () => {
     let isValid = false;
+    return isValid;
   };
 
   return (
