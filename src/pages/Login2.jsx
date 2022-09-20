@@ -3,17 +3,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../redux/actions";
 import styled from "styled-components";
+import Button from "../components/Button";
 
 export default function Login() {
   const Container = styled.div`
-    width: 760px;
+    width: 480px;
     margin: 0 auto;
   `;
 
   const LoginBox = styled.div`
-    width: 100%;
     margin-top: 150px;
-    padding: 20px;
+    padding: 80px 20px;
+    border: 2px solid #ccc;
     text-align: center;
     box-sizing: border-box;
   `;
@@ -33,7 +34,7 @@ export default function Login() {
     box-sizing: border-box;
     margin-bottom: 40px;
   `;
-
+  /*
   const Button = styled.button`
     width: 100%;
     padding: 10px;
@@ -48,7 +49,7 @@ export default function Login() {
       background-color: #f32266;
     }
   `;
-
+*/
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -58,12 +59,13 @@ export default function Login() {
 
   useEffect(() => {
     console.log("Login2.jsx= " + isLogged);
-    if (isLogged === true) navigate("/");
+
+    if (isLogged) navigate("/");
   }, [isLogged]);
 
   const loginSubmit = (e) => {
     e.preventDefault();
-    if (handleValidation(e) === false) {
+    if (handleValidation(e)) {
       dispatch(login());
       console.log("is= " + isLogged);
 

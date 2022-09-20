@@ -1,11 +1,10 @@
 import React from "react";
-import { Header, Content } from "./../layout/index";
+import { Header } from "./../layout/index";
 
 const Main = () => {
   return (
     <div>
       <Header></Header>
-      <Content></Content>
     </div>
   );
 };
