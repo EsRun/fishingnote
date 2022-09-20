@@ -57,12 +57,9 @@ export default function Login() {
   }));
 
   useEffect(() => {
-    console.log("Login.jsx= " + isLogged);
-    if (isLogged === true) {
-      console.log("Login.jsx2= " + isLogged);
-      navigate("/");
-    }
-  });
+    console.log("Login2.jsx= " + isLogged);
+    if (isLogged === true) navigate("/");
+  }, [isLogged]);
 
   const loginSubmit = (e) => {
     e.preventDefault();
