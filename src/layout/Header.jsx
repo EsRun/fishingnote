@@ -24,6 +24,7 @@ export default function Header() {
 
   const Ul = styled.ul`
     display: flex;
+    padding-left: 40px;
     list-style: none;
   `;
 
