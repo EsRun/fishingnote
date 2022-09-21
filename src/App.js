@@ -1,9 +1,7 @@
 import { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Login2, Error } from "./pages/";
-import Ship from "./pages/Ship";
+import { Login2, Boat, Land, Error } from "./pages/";
 import Layout from "./layout/Layout";
-import Land from "./pages/Land";
 import GlobalStyle from "./resources/css/GlobalStyle";
 
 function App() {
@@ -16,7 +14,7 @@ function App() {
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/ship" element={<Ship />} />
+          <Route path="/boat" element={<Boat />} />
           <Route path="/land" element={<Land />} />
         </Route>
         {/* 
