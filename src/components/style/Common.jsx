@@ -8,5 +8,5 @@ export const Container = styled.div`
 
 export const Row = styled.div`
   width: 100%;
-  padding: 20px 0;
+  padding: 20px;
 `;

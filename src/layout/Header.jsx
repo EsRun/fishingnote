@@ -14,6 +14,7 @@ export default function Header() {
   const NavBox = styled.div`
     margin: 10px 0;
     display: flex;
+    justify-content: space-between;
     align-items: center;
   `;
 
@@ -32,7 +33,7 @@ export default function Header() {
   `;
 
   return (
-    <>
+    <header>
       <Nav>
         <Container>
           <NavBox>
@@ -51,6 +52,6 @@ export default function Header() {
           </NavBox>
         </Container>
       </Nav>
-    </>
+    </header>
   );
 }

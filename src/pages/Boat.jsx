@@ -41,9 +41,12 @@ function TopComponent() {
 
   const Li = styled.li`
     // width: ${(props) => props.width};
-    ${BoxStyle}
-    &:hover {
-      border: 2px solid pink;
+    padding: 10px 20px;
+    &:hover a {
+      color: pink;
+    }
+    &:first-child {
+      padding-left: 0;
     }
     &:not(:last-child) {
       margin-right: 50px;
@@ -52,7 +55,14 @@ function TopComponent() {
 
   const Select = styled.select`
     ${BoxStyle}
+    font-size: 1.6rem;
   `;
+
+  const locations = [
+    { value: "1", name: "진해" },
+    { value: "2", name: "삼천포" },
+    { value: "3", name: "여수" },
+  ];
   return (
     <>
       <Ul>
@@ -67,9 +77,11 @@ function TopComponent() {
         </Li>
       </Ul>
       <Select>
-        <option>진해</option>
-        <option>삼천포</option>
-        <option>여수</option>
+        {locations.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.name}
+          </option>
+        ))}
       </Select>
     </>
   );
