@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Row, Select } from "../components/style/Common";
+import { Container, Row } from "../components/style/Common";
 import styled from "styled-components";
 
 export default function Boat() {
@@ -36,18 +36,20 @@ function TopComponent() {
   const Ul = styled.ul`
     display: flex;
     justify-content: flex-start;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   `;
 
   const Li = styled.li`
     // width: ${(props) => props.width};
     padding: 10px 20px;
-    &:hover a {
-      color: pink;
+
+    &:hover {
+      border-bottom: 5px solid skyblue;
+      a {
+        color: #1e9eff;
+      }
     }
-    &:first-child {
-      padding-left: 0;
-    }
+
     &:not(:last-child) {
       margin-right: 50px;
     }
