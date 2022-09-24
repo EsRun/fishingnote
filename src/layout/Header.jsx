@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Container } from "../components/style/Common";
 import styled from "styled-components";
 
@@ -7,12 +7,13 @@ export default function Header() {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: #4e8ecf;
+    color: #fff;
     border-bottom: 1px solid #ccc;
   `;
 
   const NavBox = styled.div`
-    margin: 10px 0;
+    margin: 5px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +31,14 @@ export default function Header() {
 
   const Li = styled.li`
     padding: 10px;
+    a {
+      color: #ddd;
+    }
   `;
+
+  const activeStyle = {
+    color: "#fff",
+  };
 
   return (
     <header>
@@ -40,13 +48,28 @@ export default function Header() {
             <Logo>Note</Logo>
             <Ul>
               <Li>
-                <Link to="/boat">메뉴1</Link>
+                <NavLink
+                  to="/boat"
+                  style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                >
+                  메뉴1
+                </NavLink>
               </Li>
               <Li>
-                <Link to="/land">메뉴2</Link>
+                <NavLink
+                  to="/land"
+                  style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                >
+                  메뉴2
+                </NavLink>
               </Li>
               <Li>
-                <Link to="/articles/3">메뉴3</Link>
+                <NavLink
+                  to="/articles/3"
+                  style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                >
+                  메뉴3
+                </NavLink>
               </Li>
             </Ul>
           </NavBox>
