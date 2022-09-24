@@ -7,7 +7,7 @@ export default function Header() {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #4e8ecf;
+    background-color: #67a5e5;
     color: #fff;
     border-bottom: 1px solid #ccc;
   `;
