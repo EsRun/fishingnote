@@ -91,8 +91,10 @@ function TopComponent() {
 
 function MiddleComponent() {
   const MiddleContainer = styled.div`
-    border: 2px solid #ccc;
-    max-height: 500px;
+    padding: 20px;
+    height: 500px;
+    background-color: skyblue;
+    border-radius: 5px;
   `;
   return (
     <>
