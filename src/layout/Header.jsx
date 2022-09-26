@@ -21,6 +21,9 @@ export default function Header() {
 
   const Logo = styled.div`
     font-size: 2.4rem;
+    a {
+      color: #fff;
+    }
   `;
 
   const Ul = styled.ul`
@@ -45,7 +48,14 @@ export default function Header() {
       <Nav>
         <Container>
           <NavBox>
-            <Logo>Note</Logo>
+            <Logo>
+              <NavLink
+                to="/"
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              >
+                Note
+              </NavLink>
+            </Logo>
             <Ul>
               <Li>
                 <NavLink
