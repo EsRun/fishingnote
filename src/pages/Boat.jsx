@@ -1,6 +1,11 @@
 import React from "react";
 import { Container, Row } from "../components/style/Common";
-import { Nav, Content, BoatContainer } from "../components/Boat";
+import {
+  Nav,
+  MiddleContainer,
+  BoatContainer,
+  MiddleContent,
+} from "../components/Boat";
 
 export default function Boat() {
   return (
@@ -12,7 +17,12 @@ export default function Boat() {
           </BoatContainer>
         </Row>
         <Row>
-          <Content></Content>
+          <MiddleContainer>
+            <MiddleContent />
+          </MiddleContainer>
+          <MiddleContainer>
+            <MiddleContent />
+          </MiddleContainer>
         </Row>
       </Container>
     </>

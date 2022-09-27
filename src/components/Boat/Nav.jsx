@@ -19,7 +19,7 @@ export default function Nav() {
     padding: 10px 20px;
 
     &:hover {
-      border-bottom: 5px solid skyblue;
+      //border-bottom: 5px solid skyblue;
       a {
         color: #1e9eff;
       }

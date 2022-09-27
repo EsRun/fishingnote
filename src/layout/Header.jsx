@@ -13,8 +13,8 @@ export default function Header() {
   `;
 
   const NavBox = styled.div`
-    padding: 5px 0;
     display: flex;
+    height: 60px;
     justify-content: space-between;
     align-items: center;
   `;
