@@ -1,42 +1,55 @@
-import React from "react";
 import styled from "styled-components";
 
 export default function MiddleContent() {
-  const MiddleDiv = styled.div``;
+  const MiddleBox = styled.div`
+    display: flex;
+    margin-bottom: 20px;
+  `;
 
   const Ul = styled.ul`
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
     font-size: 1.8rem;
   `;
 
   const Li = styled.li`
+    margin-bottom: 20px;
     padding: 30px;
     width: 265px;
     height: 320px;
     background-color: #54b1e7;
+    border-radius: 5px;
     color: #fff;
-    &:not(:first-child) {
-      margin-left: 20px;
-    }
   `;
+
+  const contentData = [
+    { month: "1", species: "종류1, 종류2, 종류3" },
+    { month: "2", species: "종류1, 종류2, 종류3" },
+    { month: "3", species: "종류1, 종류2, 종류3" },
+    { month: "4", species: "종류1, 종류2, 종류3" },
+    { month: "5", species: "종류1, 종류2, 종류3" },
+    { month: "6", species: "종류1, 종류2, 종류3" },
+    { month: "7", species: "종류1, 종류2, 종류3" },
+    { month: "8", species: "종류1, 종류2, 종류3" },
+    { month: "9", species: "종류1, 종류2, 종류3" },
+    { month: "10", species: "종류1, 종류2, 종류3" },
+    { month: "11", species: "종류1, 종류2, 종류3" },
+    { month: "12", species: "종류1, 종류2, 종류3" },
+  ];
+
   return (
     <>
-      <Ul>
-        <Li>
-          <strong>제목</strong>
-        </Li>
-        <Li>
-          <strong>제목</strong>
-        </Li>
-        <Li>
-          <strong>제목</strong>
-        </Li>
-        <Li>
-          <strong>제목</strong>
-        </Li>
-      </Ul>
+      <MiddleBox>
+        <Ul>
+          {contentData.map((value, index) => (
+            <Li key={index}>
+              <div>{value.month}</div>
+            </Li>
+          ))}
+        </Ul>
+      </MiddleBox>
     </>
   );
 }

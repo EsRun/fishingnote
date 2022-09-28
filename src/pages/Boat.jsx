@@ -20,9 +20,6 @@ export default function Boat() {
           <MiddleContainer>
             <MiddleContent />
           </MiddleContainer>
-          <MiddleContainer>
-            <MiddleContent />
-          </MiddleContainer>
         </Row>
       </Container>
     </>
