@@ -45,7 +45,25 @@ export default function MiddleContent() {
         <Ul>
           {contentData.map((value, index) => (
             <Li key={index}>
-              <div>{value.month}</div>
+              <div
+                style={{
+                  "padding-bottom": "5px",
+                  "border-bottom": "1px solid #fff",
+                }}
+              >
+                {value.month}
+              </div>
+              <div
+                style={{
+                  "margin-top": "20px",
+                  height: "80%",
+                  "background-color": "#fff",
+                  "border-radius": "5px",
+                  color: "#000",
+                }}
+              >
+                ㅇㅇ
+              </div>
             </Li>
           ))}
         </Ul>
