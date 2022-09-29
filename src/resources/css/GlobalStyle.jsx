@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
         list-style: none;
     }
     li{
-        cursor: pointer;
+       
     }
 
 `;
