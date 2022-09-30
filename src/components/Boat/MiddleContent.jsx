@@ -1,29 +1,6 @@
-import styled from "styled-components";
+import { MiddleBox, Ul, Li } from "../style/BoatStyle";
 
 export default function MiddleContent() {
-  const MiddleBox = styled.div`
-    display: flex;
-    margin-bottom: 20px;
-  `;
-
-  const Ul = styled.ul`
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
-    font-size: 1.8rem;
-  `;
-
-  const Li = styled.li`
-    margin-bottom: 20px;
-    padding: 30px;
-    width: 265px;
-    height: 320px;
-    background-color: #77c7f5;
-    border-radius: 5px;
-    color: #fff;
-  `;
-
   const contentData = [
     { month: "2", species: ["종류1", "종류2", "종류3"], scale: "1, 2, 3" },
     { month: "3", species: ["종류1", "종류2", "종류3"], scale: "3, 4, 5" },
@@ -47,12 +24,16 @@ export default function MiddleContent() {
     },
   ];
 
+  const selectMonth = (e) => {
+    console.log(e);
+  };
+
   return (
     <>
       <MiddleBox>
         <Ul>
           {contentData.map((value, index) => (
-            <Li key={index}>
+            <Li key={index} onClick={selectMonth}>
               <div
                 style={{
                   paddingBottom: "5px",
@@ -70,7 +51,6 @@ export default function MiddleContent() {
                   flexDirection: "column",
                   backgroundColor: "#fff",
                   borderRadius: "5px",
-                  color: "#000",
                 }}
               >
                 {value.species.map((el, idx) => (
@@ -82,7 +62,6 @@ export default function MiddleContent() {
                   padding: "7px 10px",
                   backgroundColor: "#fff",
                   borderRadius: "5px",
-                  color: "#000",
                 }}
               >
                 <span>물 : </span>

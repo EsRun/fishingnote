@@ -1,48 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
 import { Container } from "../components/style/Common";
-import styled from "styled-components";
+import {
+  Nav,
+  Ul,
+  Li,
+  Logo,
+  NavBox,
+  activeStyle,
+} from "../components/style/HeaderStyle";
 
 export default function Header() {
-  const Nav = styled.nav`
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #67a5e5;
-    color: #fff;
-    border-bottom: 1px solid #ccc;
-  `;
-
-  const NavBox = styled.div`
-    display: flex;
-    height: 60px;
-    justify-content: space-between;
-    align-items: center;
-  `;
-
-  const Logo = styled.div`
-    font-size: 2.4rem;
-    a {
-      color: #fff;
-    }
-  `;
-
-  const Ul = styled.ul`
-    display: flex;
-    padding-left: 40px;
-    font-size: 1.6rem;
-  `;
-
-  const Li = styled.li`
-    padding: 10px;
-    a {
-      color: #ddd;
-    }
-  `;
-
-  const activeStyle = {
-    color: "#fff",
-  };
-
   return (
     <header>
       <Nav>

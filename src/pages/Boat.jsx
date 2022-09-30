@@ -1,11 +1,7 @@
-import React from "react";
 import { Container, Row } from "../components/style/Common";
-import {
-  Nav,
-  MiddleContainer,
-  BoatContainer,
-  MiddleContent,
-} from "../components/Boat";
+import { BoatContainer, MiddleContainer } from "../components/style/BoatStyle";
+
+import { Nav, MiddleContent } from "../components/Boat";
 
 export default function Boat() {
   return (
