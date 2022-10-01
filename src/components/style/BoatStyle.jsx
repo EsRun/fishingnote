@@ -33,6 +33,9 @@ export const Li = styled.li`
   background-color: #2963853d;
   border-radius: 5px;
   color: #4a4a4a;
+  &:hover {
+    background-color: #29638585;
+  }
 `;
 
 // Nav
