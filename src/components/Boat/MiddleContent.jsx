@@ -25,7 +25,6 @@ export default function MiddleContent() {
   ];
 
   const selectMonth = (e) => {
-    console.log(e);
     e.currentTarget.style.border = "1px solid #ff0000";
   };
 
