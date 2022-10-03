@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { Select, NavUl, NavLi } from "../style/BoatStyle";
+import { Link, NavLink } from "react-router-dom";
+import { Select, NavUl, NavLi, activeStyle } from "../style/BoatStyle";
 
 export default function Nav() {
   const locations = [
@@ -11,13 +11,28 @@ export default function Nav() {
     <>
       <NavUl>
         <NavLi>
-          <Link to="#">선택1</Link>
+          <NavLink
+            to="/boat/select1"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            선택1
+          </NavLink>
         </NavLi>
         <NavLi>
-          <Link to="#">선택2</Link>
+          <NavLink
+            to="/boat/select2"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            선택2
+          </NavLink>
         </NavLi>
         <NavLi>
-          <Link to="#">선택3</Link>
+          <NavLink
+            to="/boat/select3"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            선택3
+          </NavLink>
         </NavLi>
       </NavUl>
       <Select>

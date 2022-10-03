@@ -71,3 +71,7 @@ export const Select = styled.select`
   ${BoxStyle}
   font-size: 1.6rem;
 `;
+
+export const activeStyle = {
+  color: "#0090f9",
+};
