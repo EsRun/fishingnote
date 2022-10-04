@@ -26,7 +26,7 @@ export default function Header() {
             <Ul>
               <Li>
                 <NavLink
-                  to="/boat"
+                  to="/info"
                   style={({ isActive }) => (isActive ? activeStyle : undefined)}
                 >
                   메뉴1

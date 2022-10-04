@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Login2, Boat, Land, Error } from "./pages/";
+import { Login2, Boat, Land, Info, Error } from "./pages/";
 import Layout from "./layout/Layout";
 import GlobalStyle from "./resources/css/GlobalStyle";
 
@@ -14,7 +14,9 @@ function App() {
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/boat" element={<Boat />} />
+          <Route path="/info" element={<Info />}>
+            <Route path="/info/boat" element={<Boat />} />
+          </Route>
           <Route path="/land" element={<Land />} />
         </Route>
         {/* 
