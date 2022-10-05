@@ -16,8 +16,8 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="/info" element={<Info />}>
             <Route path="/info/boat" element={<Boat />} />
+            <Route path="/info/land" element={<Land />} />
           </Route>
-          <Route path="/land" element={<Land />} />
         </Route>
         {/* 
       <Route default path="/login" element={<Login2 />}></Route>
