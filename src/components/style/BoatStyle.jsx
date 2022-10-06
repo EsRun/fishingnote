@@ -54,11 +54,14 @@ export const NavUl = styled.ul`
 export const NavLi = styled.li`
   // width: ${(props) => props.width};
   padding: 10px 20px;
-
+  border: 1px solid #ccc;
+  border-radius: 5px;
   &:hover {
     //border-bottom: 5px solid skyblue;
+
+    background-color: #1e9eff;
     a {
-      color: #1e9eff;
+      color: #fff;
     }
   }
 

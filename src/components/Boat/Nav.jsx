@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Select, NavUl, NavLi, activeStyle } from "../style/BoatStyle";
 
 export default function Nav() {
