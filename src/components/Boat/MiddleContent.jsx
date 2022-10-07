@@ -2,9 +2,9 @@ import { MiddleBox, Ul, Li } from "../style/BoatStyle";
 
 export default function MiddleContent() {
   const contentData = [
-    { month: "2", species: ["종류1", "종류2", "종류3"], scale: "1, 2, 3" },
-    { month: "3", species: ["종류1", "종류2", "종류3"], scale: "3, 4, 5" },
-    { month: "1", species: ["종류1", "종류2", "종류3"], scale: "6, 7, 8" },
+    { month: "1", species: ["종류1", "종류2", "종류3"], scale: "1, 2, 3" },
+    { month: "2", species: ["종류1", "종류2", "종류3"], scale: "3, 4, 5" },
+    { month: "3", species: ["종류1", "종류2", "종류3"], scale: "6, 7, 8" },
     {
       month: "4",
       species: ["종류1", "종류2", "종류3"],
