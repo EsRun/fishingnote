@@ -27,7 +27,7 @@ export const Ul = styled.ul`
 
 export const Li = styled.li`
   margin-bottom: 20px;
-  padding: 30px;
+  padding: 20px;
   width: 265px;
   height: 320px;
   background-color: #2963853d;

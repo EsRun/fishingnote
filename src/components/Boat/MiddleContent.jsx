@@ -64,8 +64,8 @@ export default function MiddleContent() {
                   borderRadius: "5px",
                 }}
               >
-                <span>물 : </span>
-                <span>{value.scale}</span>
+                <span>추천 - </span>
+                <span>{value.scale}물</span>
               </div>
             </Li>
           ))}
