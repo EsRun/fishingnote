@@ -14,9 +14,9 @@ function App() {
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/info" element={<Info />}>
-            <Route path="/info/boat" element={<Boat />} />
-            <Route path="/info/land" element={<Land />} />
+          <Route path="info" element={<Info />}>
+            <Route path="boat" element={<Boat />} />
+            <Route path="land" element={<Land />} />
           </Route>
         </Route>
         {/* 
