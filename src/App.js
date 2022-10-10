@@ -19,12 +19,6 @@ function App() {
             <Route path="land" element={<Land />} />
           </Route>
         </Route>
-        {/* 
-      <Route default path="/login" element={<Login2 />}></Route>
-      <Route path="/" element={<Main />}>
-        <Route path=":id" element={<Main />}></Route>
-      </Route>
-       */}
         <Route path="/error" element={<Error />}></Route>
         <Route path="/*" element={<Navigate to="/error" replace />} />
       </Routes>
