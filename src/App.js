@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Login2, Boat, Land, Info, Error } from "./pages/";
+import { Boat, Land, Info, Error } from "./pages/";
 import Layout from "./layout/Layout";
 import GlobalStyle from "./resources/css/GlobalStyle";
 

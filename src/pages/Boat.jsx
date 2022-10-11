@@ -1,4 +1,4 @@
-import { BoatContainer, MiddleContainer } from "../components/style/BoatStyle";
+import { MiddleContainer } from "../components/style/BoatStyle";
 
 import { MiddleContent } from "../components/Boat";
 
