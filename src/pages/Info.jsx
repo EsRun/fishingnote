@@ -1,15 +1,15 @@
 import { Outlet } from "react-router-dom";
 import { Nav } from "../components/Boat";
-import { BoatContainer } from "../components/style/BoatStyle";
+import { NavContainer } from "../components/style/BoatStyle";
 import { Container, Row } from "../components/style/Common";
 
 export default function Info() {
   return (
     <Container>
       <Row>
-        <BoatContainer>
+        <NavContainer>
           <Nav />
-        </BoatContainer>
+        </NavContainer>
       </Row>
       <Row>
         <Outlet />

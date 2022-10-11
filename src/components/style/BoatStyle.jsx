@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const BoatContainer = styled.div`
+export const NavContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
