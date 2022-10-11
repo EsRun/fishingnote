@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import { Nav } from "../components/Boat";
-import { NavContainer } from "../components/style/BoatStyle";
+import { Nav, MiddleContent } from "../components/Boat";
+import { NavContainer, MiddleContainer } from "../components/style/BoatStyle";
 import { Container, Row } from "../components/style/Common";
 
 export default function Info() {
@@ -12,7 +12,9 @@ export default function Info() {
         </NavContainer>
       </Row>
       <Row>
-        <Outlet />
+        <MiddleContainer>
+          <MiddleContent />
+        </MiddleContainer>
       </Row>
     </Container>
   );

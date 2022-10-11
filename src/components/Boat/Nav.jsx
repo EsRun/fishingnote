@@ -12,7 +12,7 @@ export default function Nav() {
       <NavUl>
         <NavLi>
           <NavLink
-            to="/info/boat"
+            to="#"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             선택1
@@ -20,7 +20,7 @@ export default function Nav() {
         </NavLi>
         <NavLi>
           <NavLink
-            to="/info/land"
+            to="#"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             선택2
@@ -28,7 +28,7 @@ export default function Nav() {
         </NavLi>
         <NavLi>
           <NavLink
-            to="/boat/select3"
+            to="#"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             선택3
