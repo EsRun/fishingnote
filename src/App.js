@@ -15,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="info" element={<Info />}></Route>
+          <Route path="land" element={<Land />}></Route>
         </Route>
         <Route path="/error" element={<Error />}></Route>
         <Route path="/*" element={<Navigate to="/error" replace />} />
