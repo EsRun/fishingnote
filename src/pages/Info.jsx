@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { Nav, MiddleContent } from "../components/Boat";
 import { NavContainer, MiddleContainer } from "../components/style/BoatStyle";
 import { Container, Row } from "../components/style/Common";
@@ -22,7 +20,7 @@ export default function Info() {
       </Row>
       <Row>
         <MiddleContainer>
-          <MiddleContent />
+          <MiddleContent Nav={nav} Location={location} />
         </MiddleContainer>
       </Row>
     </Container>

@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import { MiddleBox, Ul, Li } from "../style/BoatStyle";
 
-export default function MiddleContent() {
+export default function MiddleContent(props) {
+  useEffect(() => {
+    console.log("pr", props.Nav);
+  });
   const contentData = [
     { month: "1", species: ["종류1", "종류2", "종류3"], scale: "1, 2, 3" },
     { month: "2", species: ["종류1", "종류2", "종류3"], scale: "3, 4, 5" },
@@ -40,7 +44,7 @@ export default function MiddleContent() {
                   borderBottom: "3px solid #fff",
                 }}
               >
-                <span key={index}>{value.month}월</span>
+                <span key={index}>{index + 1}월</span>
               </div>
               <div
                 style={{
