@@ -60,7 +60,7 @@ export default function MiddleContent(props) {
   const sets = useMemo(() => setFunc(props.Nav), [setFunc, props.Nav]);
 */
   useEffect(() => {
-    console.log("pr", props.Nav);
+    console.log("props Nav= ", props.Nav);
   }, [props.Nav]);
 
   const selectMonth = (e) => {
