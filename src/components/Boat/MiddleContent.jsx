@@ -1,7 +1,4 @@
-import { useState } from "react";
-import { useCallback } from "react";
-import { useMemo } from "react";
-import { useEffect } from "react";
+import { useState, useCallback, useMemo, useEffect } from "react";
 import { MiddleBox, Ul, Li } from "../style/BoatStyle";
 
 export default function MiddleContent(props) {
