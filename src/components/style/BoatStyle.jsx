@@ -78,3 +78,7 @@ export const Select = styled.select`
 export const activeStyle = {
   color: "#0090f9",
 };
+
+export const selectItemStyle = {
+  border: "1px solid green",
+};

@@ -1,8 +1,9 @@
 import { useState, useCallback, useMemo, useEffect } from "react";
-import { MiddleBox, Ul, Li } from "../style/BoatStyle";
+import { MiddleBox, Ul, Li, selectItemStyle } from "../style/BoatStyle";
 
 export default function MiddleContent(props) {
   const [select, setSelect] = useState([]);
+  const [activeItem, setActiveItem] = useState(false);
 
   const boatArray = [
     { month: "1", species: ["종류1", "종류2", "종류3"], scale: "1, 2, 3" },
@@ -56,12 +57,16 @@ export default function MiddleContent(props) {
 
   const sets = useMemo(() => setFunc(props.Nav), [setFunc, props.Nav]);
 */
+
   useEffect(() => {
     console.log("props Nav= ", props.Nav);
+    props.Nav === 1 ? setSelect(boatArray) : setSelect(landArray);
   }, [props.Nav]);
 
   const selectMonth = (e) => {
-    e.currentTarget.style.border = "1px solid #ff0000";
+    //setActiveItem((current) => !current);
+    e.currentTarget.classList.toggle("selectItemStyle");
+    //e.currentTarget.style.border = "1px solid #ff0000";
   };
 
   return (
