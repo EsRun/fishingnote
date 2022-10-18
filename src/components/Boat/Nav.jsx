@@ -17,17 +17,17 @@ export default function Nav(props) {
       <NavUl>
         <NavLi>
           <Link to="#" onClick={() => props.setNav(1)}>
-            선택1
+            Boat
           </Link>
         </NavLi>
         <NavLi>
           <Link to="#" onClick={() => props.setNav(2)}>
-            선택2
+            Land
           </Link>
         </NavLi>
         <NavLi>
           <Link to="#" onClick={() => props.setNav(3)}>
-            선택3
+            Other
           </Link>
         </NavLi>
       </NavUl>

@@ -6,24 +6,24 @@ export default function MiddleContent(props) {
   const [activeItem, setActiveItem] = useState(false);
 
   const boatArray = [
-    { month: "1", species: ["종류1", "종류2", "종류3"], scale: "1, 2, 3" },
-    { month: "2", species: ["종류1", "종류2", "종류3"], scale: "3, 4, 5" },
-    { month: "3", species: ["종류1", "종류2", "종류3"], scale: "6, 7, 8" },
+    { month: "1", species: ["Boat1", "Boat2", "Boat3"], scale: "1, 2, 3" },
+    { month: "2", species: ["Boat1", "Boat2", "Boat3"], scale: "3, 4, 5" },
+    { month: "3", species: ["Boat1", "Boat2", "Boat3"], scale: "6, 7, 8" },
     {
       month: "4",
-      species: ["종류1", "종류2", "종류3"],
+      species: ["Boat1", "Boat2", "Boat3"],
       scale: "10, 11, 12, 13",
     },
-    { month: "5", species: ["종류1", "종류2", "종류3"], scale: "1, 2" },
-    { month: "6", species: ["종류1", "종류2", "종류3"], scale: "13, 14, 15" },
-    { month: "7", species: ["종류1", "종류2", "종류3"], scale: "4, 5, 6" },
-    { month: "8", species: ["종류1", "종류2", "종류3"], scale: "3, 5, 7" },
-    { month: "9", species: ["종류1", "종류2", "종류3"], scale: "8, 9, 10" },
-    { month: "10", species: ["종류1", "종류2", "종류3"], scale: "3, 4" },
-    { month: "11", species: ["종류1", "종류2", "종류3"], scale: "1, 2" },
+    { month: "5", species: ["Boat1", "Boat2", "Boat3"], scale: "1, 2" },
+    { month: "6", species: ["Boat1", "Boat2", "Boat3"], scale: "13, 14, 15" },
+    { month: "7", species: ["Boat1", "Boat2", "Boat3"], scale: "4, 5, 6" },
+    { month: "8", species: ["Boat1", "Boat2", "Boat3"], scale: "3, 5, 7" },
+    { month: "9", species: ["Boat1", "Boat2", "Boat3"], scale: "8, 9, 10" },
+    { month: "10", species: ["Boat1", "Boat2", "Boat3"], scale: "3, 4" },
+    { month: "11", species: ["Boat1", "Boat2", "Boat3"], scale: "1, 2" },
     {
       month: "12",
-      species: ["종류1", "종류2", "종류3"],
+      species: ["Boat1", "Boat2", "Boat3"],
       scale: "12, 13, 14, 15",
     },
   ];
@@ -50,6 +50,33 @@ export default function MiddleContent(props) {
       scale: "12, 13, 14, 15",
     },
   ];
+
+  const otherArray = [
+    { month: "1", species: ["Other1", "Other2", "Other3"], scale: "1, 2, 3" },
+    { month: "2", species: ["Other1", "Other2", "Other3"], scale: "3, 4, 5" },
+    { month: "3", species: ["Other1", "Other2", "Other3"], scale: "6, 7, 8" },
+    {
+      month: "4",
+      species: ["Other1", "Other2", "Other3"],
+      scale: "10, 11, 12, 13",
+    },
+    { month: "5", species: ["Other1", "Other2", "Other3"], scale: "1, 2" },
+    {
+      month: "6",
+      species: ["Other1", "Other2", "Other3"],
+      scale: "13, 14, 15",
+    },
+    { month: "7", species: ["Other1", "Other2", "Other3"], scale: "4, 5, 6" },
+    { month: "8", species: ["Other1", "Other2", "Other3"], scale: "3, 5, 7" },
+    { month: "9", species: ["Other1", "Other2", "Other3"], scale: "8, 9, 10" },
+    { month: "10", species: ["Other1", "Other2", "Other3"], scale: "3, 4" },
+    { month: "11", species: ["Other1", "Other2", "Other3"], scale: "1, 2" },
+    {
+      month: "12",
+      species: ["Other1", "Other2", "Other3"],
+      scale: "12, 13, 14, 15",
+    },
+  ];
   /*
   const setFunc = useCallback(() => {
     props.Nav === 1 ? setSelect(boatArray) : setSelect(landArray);
@@ -60,7 +87,11 @@ export default function MiddleContent(props) {
 
   useEffect(() => {
     console.log("props Nav= ", props.Nav);
-    props.Nav === 1 ? setSelect(boatArray) : setSelect(landArray);
+    props.Nav === 1
+      ? setSelect(boatArray)
+      : props.Nav === 2
+      ? setSelect(landArray)
+      : setSelect(otherArray);
   }, [props.Nav]);
 
   const selectMonth = (e) => {
