@@ -7,10 +7,7 @@ export default function Info() {
   const [nav, setNav] = useState(1);
   const [location, setLocation] = useState(1);
 
-  useEffect(() => {
-    console.log("nav= ", nav);
-    console.log("location= ", location);
-  }, [nav, location]);
+  useEffect(() => {}, [nav, location]);
   return (
     <Container>
       <Row>

@@ -87,12 +87,13 @@ export default function MiddleContent(props) {
 
   useEffect(() => {
     console.log("props Nav= ", props.Nav);
+    console.log("props location= ", props.Location);
     props.Nav === 1
       ? setSelect(boatArray)
       : props.Nav === 2
       ? setSelect(landArray)
       : setSelect(otherArray);
-  }, [props.Nav]);
+  }, [props.Nav, props.Location]);
 
   const selectMonth = (e) => {
     //setActiveItem((current) => !current);
