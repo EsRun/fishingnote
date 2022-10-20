@@ -38,6 +38,21 @@ export const Li = styled.li`
   }
 `;
 
+export const TitleLine = styled.div`
+  padding-bottom: 5px;
+  border-bottom: 3px solid #fff;
+`;
+
+export const BoxLine = styled.div`
+  margin: 20px 0;
+  padding: 10px;
+  display: flex;
+  height: 60%;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+`;
+
 // Nav
 export const BoxStyle = {
   padding: "10px 30px",
@@ -56,6 +71,7 @@ export const NavLi = styled.li`
   padding: 10px 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  cursor: pointer;
   &:hover {
     //border-bottom: 5px solid skyblue;
 

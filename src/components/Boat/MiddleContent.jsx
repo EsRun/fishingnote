@@ -1,5 +1,12 @@
 import { useState, useCallback, useMemo, useEffect } from "react";
-import { MiddleBox, Ul, Li, selectItemStyle } from "../style/BoatStyle";
+import {
+  MiddleBox,
+  Ul,
+  Li,
+  TitleLine,
+  BoxLine,
+  selectItemStyle,
+} from "../style/BoatStyle";
 
 export default function MiddleContent(props) {
   const [select, setSelect] = useState([]);
@@ -107,29 +114,14 @@ export default function MiddleContent(props) {
         <Ul>
           {select.map((value, index) => (
             <Li key={index} onClick={selectMonth}>
-              <div
-                style={{
-                  paddingBottom: "5px",
-                  borderBottom: "3px solid #fff",
-                }}
-              >
+              <TitleLine>
                 <span key={index}>{index + 1}월</span>
-              </div>
-              <div
-                style={{
-                  margin: "20px 0",
-                  height: "60%",
-                  padding: "10px",
-                  display: "flex",
-                  flexDirection: "column",
-                  backgroundColor: "#fff",
-                  borderRadius: "5px",
-                }}
-              >
+              </TitleLine>
+              <BoxLine>
                 {value.species.map((el, idx) => (
                   <span key={idx}>- {el}</span>
                 ))}
-              </div>
+              </BoxLine>
               <div
                 style={{
                   padding: "7px 10px",

@@ -15,20 +15,26 @@ export default function Nav(props) {
   return (
     <>
       <NavUl>
-        <NavLi>
-          <Link to="#" onClick={() => props.setNav(1)}>
-            Boat
-          </Link>
+        <NavLi
+          onClick={() => {
+            props.setNav(1);
+          }}
+        >
+          <Link to="#">Boat</Link>
         </NavLi>
-        <NavLi>
-          <Link to="#" onClick={() => props.setNav(2)}>
-            Land
-          </Link>
+        <NavLi
+          onClick={() => {
+            props.setNav(2);
+          }}
+        >
+          <Link to="#">Land</Link>
         </NavLi>
-        <NavLi>
-          <Link to="#" onClick={() => props.setNav(3)}>
-            Other
-          </Link>
+        <NavLi
+          onClick={() => {
+            props.setNav(3);
+          }}
+        >
+          <Link to="#">Other</Link>
         </NavLi>
       </NavUl>
       <Select onChange={onSelect}>
