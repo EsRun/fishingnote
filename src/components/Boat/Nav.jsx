@@ -12,6 +12,8 @@ export default function Nav(props) {
     props.setLocation(e.target.value);
   };
 
+  const onToggle = (e) => {};
+
   return (
     <>
       <NavUl>
