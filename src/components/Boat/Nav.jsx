@@ -14,6 +14,12 @@ export default function Nav(props) {
 
   const onToggle = (e) => {};
 
+  /**
+   nav 부분 div로 변경 예정
+   굳이 Link 사용 할 필요가 없을 듯
+   div span으로 처리
+  */
+
   return (
     <>
       <NavUl>
