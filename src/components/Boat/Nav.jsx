@@ -22,21 +22,21 @@ export default function Nav(props) {
             props.setNav(1);
           }}
         >
-          <Link to="#">Boat</Link>
+          <Link to="#">선상</Link>
         </NavLi>
         <NavLi
           onClick={() => {
             props.setNav(2);
           }}
         >
-          <Link to="#">Land</Link>
+          <Link to="#">도보</Link>
         </NavLi>
         <NavLi
           onClick={() => {
             props.setNav(3);
           }}
         >
-          <Link to="#">Other</Link>
+          <Link to="#">기타</Link>
         </NavLi>
       </NavUl>
       <Select onChange={onSelect}>
