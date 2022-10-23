@@ -24,13 +24,31 @@ export default function Nav(props) {
     <>
       <div style={{ display: "flex" }}>
         <div>
-          <span>선상</span>
+          <span
+            onClick={() => {
+              props.setNav(1);
+            }}
+          >
+            선상
+          </span>
         </div>
         <div>
-          <span>도보</span>
+          <span
+            onClick={() => {
+              props.setNav(2);
+            }}
+          >
+            도보
+          </span>
         </div>
         <div>
-          <span>기타</span>
+          <span
+            onClick={() => {
+              props.setNav(3);
+            }}
+          >
+            기타
+          </span>
         </div>
       </div>
       {/*     
