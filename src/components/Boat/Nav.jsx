@@ -22,6 +22,18 @@ export default function Nav(props) {
 
   return (
     <>
+      <div style={{ display: "flex" }}>
+        <div>
+          <span>선상</span>
+        </div>
+        <div>
+          <span>도보</span>
+        </div>
+        <div>
+          <span>기타</span>
+        </div>
+      </div>
+      {/*     
       <NavUl>
         <NavLi
           onClick={() => {
@@ -44,7 +56,8 @@ export default function Nav(props) {
         >
           <Link to="#">기타</Link>
         </NavLi>
-      </NavUl>
+      </NavUl> */}
+
       <Select onChange={onSelect}>
         {locations.map((option) => (
           <option key={option.value} value={option.value}>
