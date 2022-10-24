@@ -22,8 +22,15 @@ export default function Nav(props) {
 
   return (
     <>
-      <div style={{ display: "flex" }}>
-        <div>
+      <div
+        style={{
+          display: "flex",
+          fontSize: "1.6rem",
+          alignItems: "center",
+          cursor: "pointer",
+        }}
+      >
+        <div style={{ padding: "0 20px" }}>
           <span
             onClick={() => {
               props.setNav(1);
@@ -32,7 +39,7 @@ export default function Nav(props) {
             선상
           </span>
         </div>
-        <div>
+        <div style={{ padding: "0 20px" }}>
           <span
             onClick={() => {
               props.setNav(2);
@@ -41,7 +48,7 @@ export default function Nav(props) {
             도보
           </span>
         </div>
-        <div>
+        <div style={{ padding: "0 20px" }}>
           <span
             onClick={() => {
               props.setNav(3);

@@ -86,6 +86,8 @@ export const NavLi = styled.li`
   }
 `;
 
+export const NavItem = styled.span``;
+
 export const Select = styled.select`
   ${BoxStyle}
   font-size: 1.6rem;
