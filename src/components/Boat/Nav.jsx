@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Select, NavUl, NavLi, activeStyle } from "../style/BoatStyle";
+import { Select, NavItem, NavUl, NavLi, activeStyle } from "../style/BoatStyle";
 
 export default function Nav(props) {
   const locations = [
@@ -30,32 +30,32 @@ export default function Nav(props) {
           cursor: "pointer",
         }}
       >
-        <div style={{ padding: "0 20px" }}>
-          <span
+        <div>
+          <NavItem
             onClick={() => {
               props.setNav(1);
             }}
           >
             선상
-          </span>
+          </NavItem>
         </div>
-        <div style={{ padding: "0 20px" }}>
-          <span
+        <div>
+          <NavItem
             onClick={() => {
               props.setNav(2);
             }}
           >
             도보
-          </span>
+          </NavItem>
         </div>
-        <div style={{ padding: "0 20px" }}>
-          <span
+        <div>
+          <NavItem
             onClick={() => {
               props.setNav(3);
             }}
           >
             기타
-          </span>
+          </NavItem>
         </div>
       </div>
       {/*     
