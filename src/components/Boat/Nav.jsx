@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
-import { Select, NavItem, NavUl, NavLi, activeStyle } from "../style/BoatStyle";
+import {
+  Select,
+  NavBox,
+  NavItem,
+  NavUl,
+  NavLi,
+  activeStyle,
+} from "../style/BoatStyle";
 
 export default function Nav(props) {
   const locations = [
@@ -16,14 +23,7 @@ export default function Nav(props) {
 
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          fontSize: "1.6rem",
-          alignItems: "center",
-          cursor: "pointer",
-        }}
-      >
+      <NavBox>
         <div>
           <NavItem
             onClick={() => {
@@ -51,7 +51,7 @@ export default function Nav(props) {
             기타
           </NavItem>
         </div>
-      </div>
+      </NavBox>
       <Select onChange={onSelect}>
         {locations.map((option) => (
           <option key={option.value} value={option.value}>

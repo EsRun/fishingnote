@@ -86,6 +86,13 @@ export const NavLi = styled.li`
   }
 `;
 
+export const NavBox = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+`;
+
 export const NavItem = styled.span`
   padding: 20px 40px;
 
