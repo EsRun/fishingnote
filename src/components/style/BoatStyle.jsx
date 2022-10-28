@@ -30,7 +30,7 @@ export const Li = styled.li`
   padding: 20px;
   width: 265px;
   height: 320px;
-  background-color: #2963853d;
+  background-color: #d0deeb;
   border-radius: 5px;
   color: #4a4a4a;
   &:hover {
@@ -107,11 +107,11 @@ export const Select = styled.select`
   font-size: 1.6rem;
 `;
 
-export const activeStyle = {
-  color: "#0090f9",
+export const SelectNav = {
+  color: " #00b5ff",
+  borderBottom: "5px solid skyblue",
 };
 
-export const selectItemStyle = {
-  color: " #00b5ff",
-  "border-bottom": "5px solid skyblue",
+export const SelectItem = {
+  backgroundColor: "#29638585",
 };

@@ -6,8 +6,7 @@ import {
   NavItem,
   NavUl,
   NavLi,
-  activeStyle,
-  selectItemStyle,
+  SelectNav,
 } from "../style/BoatStyle";
 
 export default function Nav(props) {
@@ -27,6 +26,7 @@ export default function Nav(props) {
 
   const onSelect = (idx) => {
     setActiveClass(idx);
+    props.setNav(idx);
   };
 
   return (
@@ -35,10 +35,9 @@ export default function Nav(props) {
         {methods.map((value, index) => (
           <div key={index}>
             <NavItem
-              style={activeClass === index ? selectItemStyle : null}
+              style={activeClass === index ? SelectNav : null}
               key={index}
               onClick={() => {
-                props.setNav(index);
                 onSelect(index);
               }}
             >

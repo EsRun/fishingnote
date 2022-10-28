@@ -5,12 +5,12 @@ import {
   Li,
   TitleLine,
   BoxLine,
-  selectItemStyle,
+  SelectItem,
 } from "../style/BoatStyle";
 
 export default function MiddleContent(props) {
   const [select, setSelect] = useState([]);
-  const [activeItem, setActiveItem] = useState(false);
+  const [activeClass, setActiveClass] = useState(0);
 
   const boatArray = [
     { month: "1", species: ["Boat1", "Boat2", "Boat3"], scale: "1, 2, 3" },
@@ -100,12 +100,11 @@ export default function MiddleContent(props) {
       : props.Nav === 2
       ? setSelect(landArray)
       : setSelect(otherArray);
+    setActiveClass(0);
   }, [props.Nav, props.Location]);
 
-  const selectMonth = (e) => {
-    //setActiveItem((current) => !current);
-    e.currentTarget.classList.toggle("selectItemStyle");
-    //e.currentTarget.style.border = "1px solid #ff0000";
+  const onSelect = (idx) => {
+    setActiveClass(idx);
   };
 
   return (
@@ -113,7 +112,11 @@ export default function MiddleContent(props) {
       <MiddleBox>
         <Ul>
           {select.map((value, index) => (
-            <Li key={index} onClick={selectMonth}>
+            <Li
+              key={index}
+              onClick={() => onSelect(index)}
+              style={activeClass === index ? SelectItem : null}
+            >
               <TitleLine>
                 <span key={index}>{index + 1}월</span>
               </TitleLine>
