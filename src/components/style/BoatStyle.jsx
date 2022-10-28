@@ -112,5 +112,6 @@ export const activeStyle = {
 };
 
 export const selectItemStyle = {
-  border: "1px solid green",
+  color: " #00b5ff",
+  "border-bottom": "5px solid skyblue",
 };

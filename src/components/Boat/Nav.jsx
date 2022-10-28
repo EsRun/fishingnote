@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Select,
@@ -6,9 +7,12 @@ import {
   NavUl,
   NavLi,
   activeStyle,
+  selectItemStyle,
 } from "../style/BoatStyle";
 
 export default function Nav(props) {
+  const [activeClass, setActiveClass] = useState(0);
+
   const locations = [
     { value: "1", name: "진해" },
     { value: "2", name: "삼천포" },
@@ -21,11 +25,9 @@ export default function Nav(props) {
     { value: "3", name: "기타" },
   ];
 
-  const onSelect = (e) => {
-    props.setLocation(e.target.value);
+  const onSelect = (idx) => {
+    setActiveClass(idx);
   };
-
-  const onToggle = (e) => {};
 
   return (
     <>
@@ -33,43 +35,17 @@ export default function Nav(props) {
         {methods.map((value, index) => (
           <div key={index}>
             <NavItem
+              style={activeClass === index ? selectItemStyle : null}
               key={index}
               onClick={() => {
                 props.setNav(index);
+                onSelect(index);
               }}
             >
               {value.name}
             </NavItem>
           </div>
         ))}
-        {/*         
-        <div>
-          <NavItem
-            onClick={() => {
-              props.setNav(1);
-            }}
-          >
-            선상
-          </NavItem>
-        </div>
-        <div>
-          <NavItem
-            onClick={() => {
-              props.setNav(2);
-            }}
-          >
-            도보
-          </NavItem>
-        </div>
-        <div>
-          <NavItem
-            onClick={() => {
-              props.setNav(3);
-            }}
-          >
-            기타
-          </NavItem>
-        </div> */}
       </NavBox>
       <Select onChange={onSelect}>
         {locations.map((option) => (
