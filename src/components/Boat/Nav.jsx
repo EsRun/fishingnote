@@ -15,6 +15,12 @@ export default function Nav(props) {
     { value: "3", name: "여수" },
   ];
 
+  const methods = [
+    { value: "1", name: "선상" },
+    { value: "2", name: "도보" },
+    { value: "3", name: "기타" },
+  ];
+
   const onSelect = (e) => {
     props.setLocation(e.target.value);
   };
@@ -24,6 +30,19 @@ export default function Nav(props) {
   return (
     <>
       <NavBox>
+        {methods.map((value, index) => (
+          <div key={index}>
+            <NavItem
+              key={index}
+              onClick={() => {
+                props.setNav(index);
+              }}
+            >
+              {value.name}
+            </NavItem>
+          </div>
+        ))}
+        {/*         
         <div>
           <NavItem
             onClick={() => {
@@ -50,7 +69,7 @@ export default function Nav(props) {
           >
             기타
           </NavItem>
-        </div>
+        </div> */}
       </NavBox>
       <Select onChange={onSelect}>
         {locations.map((option) => (
