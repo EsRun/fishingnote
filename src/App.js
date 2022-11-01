@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { Boat, Land, Info, Error } from "./pages/";
 import Layout from "./layout/Layout";
 import GlobalStyle from "./resources/css/GlobalStyle";
+import Index from "./pages/Index.jsx";
 
 function App() {
   useEffect(() => {
@@ -14,6 +15,7 @@ function App() {
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Index />}></Route>
           <Route path="info" element={<Info />}></Route>
           <Route path="land" element={<Land />}></Route>
         </Route>
