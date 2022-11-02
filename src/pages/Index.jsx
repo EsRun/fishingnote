@@ -1,3 +1,3 @@
 export default function Index() {
-  return <div>Index</div>;
+  return <div>Index 페이지</div>;
 }
