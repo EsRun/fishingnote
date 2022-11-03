@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import { Main } from "../components/style/Common";
 import { Header } from "./index";
 
 export default function Layout() {
@@ -9,9 +10,9 @@ export default function Layout() {
   return (
     <>
       <Header />
-      <main style={{ marginTop: "100px" }}>
+      <Main>
         <Outlet />
-      </main>
+      </Main>
     </>
   );
 }
