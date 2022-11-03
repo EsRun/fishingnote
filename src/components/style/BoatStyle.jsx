@@ -26,9 +26,9 @@ export const Ul = styled.ul`
 `;
 
 export const Li = styled.li`
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   padding: 20px;
-  width: 265px;
+  width: 315px;
   height: 320px;
   background-color: #d0deeb;
   border-radius: 5px;

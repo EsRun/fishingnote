@@ -2,14 +2,14 @@ import { Container, Row } from "../components/style/Common";
 
 export default function Index() {
   return (
-    <Container>
+    <Container style={{}}>
       <div style={{ display: "flex", flexFlow: "column" }}>
         <Row style={{ textAlign: "-webkit-right", marginBottom: "40px" }}>
           <div
             style={{
               padding: "20px",
               width: "80%",
-              height: "500px",
+              height: "700px",
               border: "1px solid skyblue",
             }}
           >
@@ -26,7 +26,7 @@ export default function Index() {
             style={{
               width: "80%",
               padding: "20px",
-              height: "500px",
+              height: "700px",
               border: "1px solid skyblue",
             }}
           >
