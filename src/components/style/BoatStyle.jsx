@@ -89,7 +89,7 @@ export const NavLi = styled.li`
 export const NavBox = styled.div`
   display: flex;
   align-items: center;
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   cursor: pointer;
 `;
 
