@@ -1,6 +1,10 @@
 import { Container, Row } from "../components/style/Common";
 
 export default function Index() {
+  /* 
+  인덱스 컨텐츠
+  이달의 어종, 어종별 채비 종류 등
+  */
   return (
     <Container style={{}}>
       <div style={{ display: "flex", flexFlow: "column" }}>
