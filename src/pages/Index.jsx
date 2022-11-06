@@ -4,6 +4,7 @@ export default function Index() {
   /* 
   인덱스 컨텐츠
   이달의 어종, 어종별 채비 종류 등
+  이미지? 텍스트?
   */
   return (
     <Container style={{}}>
