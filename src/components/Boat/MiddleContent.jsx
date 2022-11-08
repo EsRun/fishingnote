@@ -99,6 +99,8 @@ export default function MiddleContent(props) {
       ? setSelect(boatArray)
       : props.Nav === 2
       ? setSelect(landArray)
+      : props.Nav === 3
+      ? setSelect(otherArray)
       : setSelect(otherArray);
     setActiveClass(0);
   }, [props.Nav, props.Location]);
