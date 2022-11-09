@@ -97,7 +97,7 @@ export const NavItem = styled.span`
   padding: 20px 40px;
 
   &:hover {
-    color: #00b5ff;
+    color: #0043ff;
     border-bottom: 5px solid skyblue;
   }
 `;
@@ -108,7 +108,8 @@ export const Select = styled.select`
 `;
 
 export const SelectNav = {
-  color: " #00b5ff",
+  color: " #0043ff",
+  fontWeight: "600",
   borderBottom: "5px solid skyblue",
 };
 
