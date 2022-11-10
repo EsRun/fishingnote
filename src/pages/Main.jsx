@@ -23,6 +23,7 @@ export default function Index() {
             <MainRow>
               <div
                 style={{
+                  padding: "10px 0",
                   fontSize: "3.2rem",
                   fontWeight: "bold",
                   border: "1px solid orange",
