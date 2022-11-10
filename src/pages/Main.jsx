@@ -33,7 +33,13 @@ export default function Index() {
               </div>
             </MainRow>
             <MainRow>
-              <div style={{ border: "1px solid green", height: "555px" }}>
+              <div
+                style={{
+                  border: "1px solid green",
+                  height: "535px",
+                  fontSize: "1.6rem",
+                }}
+              >
                 Content
               </div>
             </MainRow>
