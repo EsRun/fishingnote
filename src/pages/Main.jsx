@@ -1,5 +1,5 @@
 import { Container, Row } from "../components/style/Common";
-import { MainBox, MainRow } from "../components/style/MainStyle";
+import { MainBox, MainRow, ContentTitle } from "../components/style/MainStyle";
 
 export default function Index() {
   /* 
@@ -22,16 +22,9 @@ export default function Index() {
             }}
           >
             <MainRow>
-              <div
-                style={{
-                  padding: "10px 0",
-                  fontSize: "3.2rem",
-                  fontWeight: "bold",
-                  border: "1px solid orange",
-                }}
-              >
+              <ContentTitle>
                 <span>타이틀</span>
-              </div>
+              </ContentTitle>
             </MainRow>
             <MainRow>
               <div
