@@ -1,5 +1,5 @@
 import { Container, Row } from "../components/style/Common";
-import { MainRow } from "../components/style/MainStyle";
+import { MainBox, MainRow } from "../components/style/MainStyle";
 
 export default function Index() {
   /* 
@@ -9,8 +9,8 @@ export default function Index() {
   컨텐츠 박스 안 구조 어떻게?
   */
   return (
-    <Container style={{}}>
-      <div style={{ display: "flex", flexFlow: "column" }}>
+    <Container>
+      <MainBox>
         <Row style={{ marginBottom: "40px" }}>
           <div
             style={{
@@ -63,7 +63,7 @@ export default function Index() {
             ></div>
           </div>
         </Row>
-      </div>
+      </MainBox>
     </Container>
   );
 }
