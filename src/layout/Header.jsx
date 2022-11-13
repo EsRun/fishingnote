@@ -48,13 +48,8 @@ export default function Header() {
                   메뉴3
                 </NavLink>
               </Li>
-              <Li>
-                <NavLink
-                  to="/articles/3"
-                  style={({ isActive }) => (isActive ? activeStyle : undefined)}
-                >
-                  Logout
-                </NavLink>
+              <Li style={{ padding: "10px 40px" }}>
+                <NavLink to="/logout">Logout</NavLink>
               </Li>
             </Ul>
           </NavBox>
