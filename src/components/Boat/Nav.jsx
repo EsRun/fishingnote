@@ -38,7 +38,7 @@ export default function Nav(props) {
               style={activeClass === index ? SelectNav : null}
               key={index}
               onClick={() => {
-                onSelect(index);
+                onSelect(value.value);
               }}
             >
               {value.name}
