@@ -108,7 +108,6 @@ export default function MiddleContent(props) {
     } else {
       setSelect(otherArray);
     }
-    console.log("select= " + select);
     setActiveClass(0);
   }, [props.Nav, props.Location]);
 
