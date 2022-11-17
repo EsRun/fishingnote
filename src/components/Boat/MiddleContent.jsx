@@ -102,13 +102,17 @@ export default function MiddleContent(props) {
     //   ? setSelect(otherArray)
     //   : setSelect(otherArray);
     if (props.Nav === "1") {
+      console.log("1");
       setSelect(boatArray);
     } else if (props.Nav === "2") {
+      console.log("2");
       setSelect(landArray);
     } else {
+      console.log("3");
+      console.log("props Nav= ", props.Nav);
       setSelect(otherArray);
     }
-    console.log("select= " + select);
+    // 이부분 어떻게?
     setActiveClass(0);
   }, [props.Nav, props.Location]);
 
