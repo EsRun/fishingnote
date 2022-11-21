@@ -112,10 +112,6 @@ export default function MiddleContent(props) {
       console.log("props Nav= ", props.Nav);
       setSelect(otherArray);
     }
-<<<<<<< HEAD
-    // 이부분 어떻게?
-=======
->>>>>>> e75b62905b3c046a5ec63c61c66020954f7eb170
     setActiveClass(0);
   }, [props.Nav, props.Location]);
 

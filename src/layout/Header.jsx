@@ -48,7 +48,7 @@ export default function Header() {
                   메뉴3
                 </NavLink>
               </Li>
-              <Li style={{ padding: "10px 40px" }}>
+              <Li style={{ paddingLeft: "40px" }}>
                 <NavLink to="/logout">Logout</NavLink>
               </Li>
             </Ul>
