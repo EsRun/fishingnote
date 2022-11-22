@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Container } from "../components/style/Common";
 import {
   Nav,
@@ -48,10 +48,12 @@ export default function Header() {
                   메뉴3
                 </NavLink>
               </Li>
-              <Li style={{ paddingLeft: "40px", color: "#fff" }}>
-                <NavLink to="/logout">Logout</NavLink>
-              </Li>
             </Ul>
+            <div style={{ paddingLeft: "40px" }}>
+              <Link to="/logout" style={{ color: "#fff", fontSize: "1.6rem" }}>
+                Logout
+              </Link>
+            </div>
           </NavBox>
         </Container>
       </Nav>

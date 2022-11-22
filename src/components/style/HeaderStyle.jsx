@@ -24,6 +24,7 @@ export const Logo = styled.div`
 `;
 
 export const Ul = styled.ul`
+  margin-left: auto;
   display: flex;
   padding-left: 40px;
   font-size: 1.6rem;
