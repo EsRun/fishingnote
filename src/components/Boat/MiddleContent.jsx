@@ -94,24 +94,14 @@ export default function MiddleContent(props) {
   useEffect(() => {
     console.log("props Nav= ", props.Nav);
     console.log("props location= ", props.Location);
-    // props.Nav === 1
-    //   ? setSelect(boatArray)
-    //   : props.Nav === 2
-    //   ? setSelect(landArray)
-    //   : props.Nav === 3
-    //   ? setSelect(otherArray)
-    //   : setSelect(otherArray);
-    if (props.Nav === "1") {
-      console.log("1");
-      setSelect(boatArray);
-    } else if (props.Nav === "2") {
-      console.log("2");
-      setSelect(landArray);
-    } else {
-      console.log("3");
-      console.log("props Nav= ", props.Nav);
-      setSelect(otherArray);
-    }
+    props.Nav === "1"
+      ? setSelect(boatArray)
+      : props.Nav === "2"
+      ? setSelect(landArray)
+      : props.Nav === "3"
+      ? setSelect(otherArray)
+      : setSelect(boatArray);
+
     setActiveClass(0);
   }, [props.Nav, props.Location]);
 
