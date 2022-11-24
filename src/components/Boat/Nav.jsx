@@ -25,9 +25,9 @@ export default function Nav(props) {
     { value: "3", name: "기타" },
   ];
 
-  const onSelect = (idx) => {
+  const onSelect = (val, idx) => {
     setActiveClass(idx);
-    props.setNav(idx);
+    props.setNav(val);
   };
 
   return (
@@ -39,7 +39,7 @@ export default function Nav(props) {
               style={activeClass === index ? SelectNav : null}
               key={index}
               onClick={() => {
-                onSelect(value.value);
+                onSelect(value.value, index);
               }}
             >
               {value.name}
