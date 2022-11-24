@@ -16,6 +16,7 @@ export default function Nav(props) {
     { value: "1", name: "진해" },
     { value: "2", name: "삼천포" },
     { value: "3", name: "여수" },
+    { value: "4", name: "기타" },
   ];
 
   const methods = [
