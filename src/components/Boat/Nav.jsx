@@ -25,9 +25,15 @@ export default function Nav(props) {
     { value: "3", name: "기타" },
   ];
 
-  const onSelect = (val, idx) => {
+  const setMethods = (val, idx, e) => {
     setActiveClass(idx);
     props.setNav(val);
+  };
+
+  const setSelect = (e) => {
+    console.log(e.target.value);
+    setActiveClass(0);
+    props.setNav(1);
   };
 
   return (
@@ -39,7 +45,7 @@ export default function Nav(props) {
               style={activeClass === index ? SelectNav : null}
               key={index}
               onClick={() => {
-                onSelect(value.value, index);
+                setMethods(value.value, index);
               }}
             >
               {value.name}
@@ -47,7 +53,7 @@ export default function Nav(props) {
           </div>
         ))}
       </NavBox>
-      <Select onChange={onSelect}>
+      <Select onChange={setSelect}>
         {locations.map((option) => (
           <option key={option.value} value={option.value}>
             {option.name}
