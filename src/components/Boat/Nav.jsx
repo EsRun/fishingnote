@@ -31,9 +31,7 @@ export default function Nav(props) {
   };
 
   const setSelect = (e) => {
-    console.log(e.target.value);
-    setActiveClass(0);
-    props.setNav(1);
+    props.setLocation(e.target.value);
   };
 
   return (

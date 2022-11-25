@@ -130,7 +130,7 @@ export default function MiddleContent(props) {
               <div
                 style={{
                   padding: "7px 10px",
-                  backgroundColor: "#fff",
+                  border: "3px solid #ccc",
                   borderRadius: "5px",
                 }}
               >

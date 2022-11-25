@@ -30,17 +30,18 @@ export const Li = styled.li`
   padding: 20px;
   width: 315px;
   height: 320px;
-  background-color: #d0deeb;
+  //background-color: #d0deeb;
+  border: 3px solid #ccc;
   border-radius: 5px;
   color: #4a4a4a;
   &:hover {
-    background-color: #29638585;
+    border-color: #78b5f3;
   }
 `;
 
 export const TitleLine = styled.div`
   padding-bottom: 5px;
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #ccc;
 `;
 
 export const BoxLine = styled.div`
@@ -49,7 +50,7 @@ export const BoxLine = styled.div`
   display: flex;
   height: 60%;
   flex-direction: column;
-  background-color: #fff;
+  border: 3px solid #ccc;
   border-radius: 5px;
 `;
 
@@ -97,8 +98,9 @@ export const NavItem = styled.span`
   padding: 20px 30px;
   color: #959595;
   &:hover {
-    color: #0043ff;
-    border-bottom: 5px solid skyblue;
+    color: #000;
+    font-weight: 600;
+    border-bottom: 5px solid #78b5f3;
   }
 `;
 
@@ -115,5 +117,5 @@ export const SelectNav = {
 };
 
 export const SelectItem = {
-  backgroundColor: "#29638585",
+  borderColor: "#78b5f3",
 };
