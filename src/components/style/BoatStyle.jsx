@@ -57,7 +57,7 @@ export const BoxLine = styled.div`
 // Nav
 export const BoxStyle = {
   padding: "10px 30px",
-  border: "2px solid #ccc",
+  border: "3px solid #ccc",
   "border-radius": "5px",
 };
 
