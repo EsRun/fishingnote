@@ -1,5 +1,6 @@
 import { Container, Row } from "../components/style/Common";
 import { MainBox, MainRow, ContentTitle } from "../components/style/MainStyle";
+import flatFish from "../resources/images/flatFish.jpg";
 
 export default function Index() {
   /* 
@@ -32,6 +33,10 @@ export default function Index() {
                   border: "1px solid green",
                   height: "535px",
                   fontSize: "1.6rem",
+                  backgroundImage: `url(${flatFish})`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "right",
                 }}
               >
                 Content

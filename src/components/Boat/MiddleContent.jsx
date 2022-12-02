@@ -7,6 +7,8 @@ import {
   BoxLine,
   SelectItem,
 } from "../style/BoatStyle";
+import crab from "../../resources/images/crab.jpg";
+import flatFish from "../../resources/images/flatFish.jpg";
 
 export default function MiddleContent(props) {
   const [select, setSelect] = useState([]);
@@ -122,7 +124,12 @@ export default function MiddleContent(props) {
               <TitleLine>
                 <span key={index}>{index + 1}월</span>
               </TitleLine>
-              <BoxLine>
+              <BoxLine
+                style={{
+                  backgroundImage: `url(${flatFish})`,
+                  backgroundSize: "contain",
+                }}
+              >
                 {value.species.map((el, idx) => (
                   <span key={idx}>- {el}</span>
                 ))}
