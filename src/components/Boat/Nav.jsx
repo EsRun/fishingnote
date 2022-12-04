@@ -28,7 +28,6 @@ export default function Nav(props) {
   const setMethods = (val, idx, e) => {
     setActiveClass(idx);
     props.setNav(val);
-    console.log(e);
   };
 
   const setSelect = (e) => {
