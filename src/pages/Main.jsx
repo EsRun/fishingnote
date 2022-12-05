@@ -30,7 +30,7 @@ export default function Index() {
             <MainRow>
               <div
                 style={{
-                  border: "1px solid green",
+                  border: "1px solid gray",
                   height: "535px",
                   fontSize: "1.6rem",
                   backgroundImage: `url(${flatFish})`,
