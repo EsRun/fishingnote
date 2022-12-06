@@ -32,7 +32,7 @@ export default function Index() {
                 style={{
                   border: "1px solid gray",
                   height: "535px",
-                  fontSize: "1.6rem",
+                  fontSize: "1.8rem",
                   backgroundImage: `url(${flatFish})`,
                   backgroundSize: "contain",
                   backgroundRepeat: "no-repeat",
