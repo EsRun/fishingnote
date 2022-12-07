@@ -3,12 +3,6 @@ import { MainBox, MainRow, ContentTitle } from "../components/style/MainStyle";
 import flatFish from "../resources/images/flatFish.jpg";
 
 export default function Index() {
-  /* 
-  인덱스 컨텐츠
-  이달의 어종, 어종별 채비 종류 등
-  이미지? 텍스트?
-  컨텐츠 박스 안 구조 어떻게?
-  */
   return (
     <Container>
       <MainBox>
