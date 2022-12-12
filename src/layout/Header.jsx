@@ -42,7 +42,7 @@ export default function Header() {
               </Li>
               <Li>
                 <NavLink
-                  to="/articles/3"
+                  to="/board"
                   style={({ isActive }) => (isActive ? activeStyle : undefined)}
                 >
                   메뉴3

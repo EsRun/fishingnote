@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Main, Land, Info, Error } from "./pages/";
+import { Main, Land, Info, Board, Error } from "./pages/";
 import Layout from "./layout/Layout";
 import GlobalStyle from "./resources/css/GlobalStyle";
 
@@ -17,6 +17,7 @@ function App() {
           <Route path="/" element={<Main />}></Route>
           <Route path="info" element={<Info />}></Route>
           <Route path="land" element={<Land />}></Route>
+          <Route path="board" element={<Board />}></Route>
         </Route>
         <Route path="/error" element={<Error />}></Route>
         <Route path="/*" element={<Navigate to="/error" replace />} />
