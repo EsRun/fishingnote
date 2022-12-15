@@ -1,4 +1,4 @@
-import { ADD_SUBSCRIBER, REMOVE_SUBSCRIBER, LOGIN, LOGOUT } from "./types";
+import { ADD_SUBSCRIBER, REMOVE_SUBSCRIBER, AUTH } from "./types";
 
 const initialState = {
   UserName: "무늬오징어",
@@ -17,15 +17,10 @@ const subscribersReducer = (state = initialState, action) => {
         ...state,
         UserName: "한치",
       };
-    case LOGIN:
+    case AUTH:
       return {
         ...state,
         isLogged: true,
-      };
-    case LOGOUT:
-      return {
-        ...state,
-        isLogged: false,
       };
     default:
       return state;
