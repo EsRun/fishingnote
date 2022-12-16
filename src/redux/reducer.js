@@ -10,12 +10,12 @@ const subscribersReducer = (state = initialState, action) => {
     case ADD_SUBSCRIBER:
       return {
         ...state,
-        UserName: "갑오징어",
+        UserName: "추가",
       };
     case REMOVE_SUBSCRIBER:
       return {
         ...state,
-        UserName: "한치",
+        UserName: "삭제",
       };
     case AUTH:
       return {

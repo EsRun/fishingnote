@@ -1,4 +1,4 @@
-import { ADD_SUBSCRIBER, REMOVE_SUBSCRIBER, LOGIN, LOGOUT } from "./types";
+import { ADD_SUBSCRIBER, REMOVE_SUBSCRIBER, AUTH } from "./types";
 
 export const addSubscriber = () => {
   return {
@@ -12,14 +12,8 @@ export const removeSubscriber = () => {
   };
 };
 
-export const login = () => {
+export const auth = () => {
   return {
-    type: LOGIN,
-  };
-};
-
-export const logout = () => {
-  return {
-    type: LOGOUT,
+    type: AUTH,
   };
 };
