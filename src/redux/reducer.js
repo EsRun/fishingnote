@@ -1,23 +1,24 @@
-import { ADD_SUBSCRIBER, REMOVE_SUBSCRIBER, AUTH } from "./types";
+import { createReducer } from "@reduxjs/toolkit";
+import { addSub, delSub, auth } from "./actions";
 
 const initialState = {
-  UserName: "무늬오징어",
+  userState: "",
   isLogged: false,
 };
-
+/*
 const subscribersReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_SUBSCRIBER:
+    case addSub.type:
       return {
         ...state,
-        UserName: "추가",
+        userState: "활성",
       };
-    case REMOVE_SUBSCRIBER:
+    case delSub.type:
       return {
         ...state,
-        UserName: "삭제",
+        userState: "비활성",
       };
-    case AUTH:
+    case auth.type:
       return {
         ...state,
         isLogged: true,
@@ -26,4 +27,12 @@ const subscribersReducer = (state = initialState, action) => {
       return state;
   }
 };
+*/
+const subscribersReducer = createReducer([], {
+  [addSub]: (state, action) => {
+    state.push({});
+  },
+  [delSub]: (state, action) => {},
+  [auth]: (state, action) => {},
+});
 export default subscribersReducer;

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { login } from "../redux/actions";
+//import { login } from "../redux/actions";
 import styled from "styled-components";
 import Button from "../components/Button";
 
@@ -66,7 +66,7 @@ export default function Login() {
   const loginSubmit = (e) => {
     e.preventDefault();
     if (handleValidation(e)) {
-      dispatch(login());
+      dispatch();
       console.log("is= " + isLogged);
 
       navigate("/");

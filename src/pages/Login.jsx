@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { login } from "../redux/actions";
-import Button from "react-bootstrap/Button";
+//import { login } from "../redux/actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFish } from "@fortawesome/free-solid-svg-icons";
 
@@ -66,7 +65,7 @@ const Login = () => {
   const loginSubmit = (e) => {
     e.preventDefault();
     if (handleValidation(e) === true) {
-      dispatch(login());
+      dispatch();
       console.log("is= " + isLogged);
 
       navigate("/");
@@ -110,9 +109,9 @@ const Login = () => {
                 "ss"
               </small>
             </div>
-            <Button type="submit" variant="primary" className="form-control">
+            <input type="submit" variant="primary" className="form-control">
               SIGN IN
-            </Button>
+            </input>
           </form>
         </div>
       </div>
