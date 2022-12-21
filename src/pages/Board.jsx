@@ -13,6 +13,9 @@ export default function Board() {
   return (
     <Container>
       <Row>
+        <div>searchBox</div>
+      </Row>
+      <Row>
         <ul>
           <li
             style={{
