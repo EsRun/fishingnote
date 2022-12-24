@@ -1,5 +1,4 @@
 import { Container, Row } from "../components/style/Common";
-//import "../resources/css/Board.css";
 
 export default function Board() {
   const btn = {
@@ -104,6 +103,7 @@ export default function Board() {
           </nav>
         </div>
       </Row>
+      <Row></Row>
     </Container>
   );
 }
