@@ -22,9 +22,6 @@ const GlobalStyle = createGlobalStyle`
     ul{
         list-style: none;
     }
-    li{
-       
-    }
 
 `;
 
